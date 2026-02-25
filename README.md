@@ -1,33 +1,44 @@
-
-________________________________________
- # 🤖 AI Agent Enterprise - Java & LangChain4j
-This project demonstrates the implementation of an Intelligent Agent capable of performing RAG (Retrieval-Augmented Generation) and executing actions in legacy systems (Function Calling) using the Java ecosystem.
-Key Technologies:
-•	Java 17: Core language for robustness and scalability.
-•	LangChain4j: LLM orchestrator for native Java integration.
-•	Maven: Build automation and dependency management.
-•	JUnit 5 & Mockito: Quality assurance and test coverage.
-Features:
-1.	Agentic Capabilities: The AI identifies the need to query external data via Java methods annotated with @Tool.
-2.	Context Memory: Conversation window management for natural interactions.
-3.	Enterprise Architecture: Clear separation between AI logic and business rules.
-________________________________________
 # 🤖 AI Agent Enterprise - Java & LangChain4j
 
-Este projeto demonstra a construção de um **Agente de IA** robusto utilizando **Java 17** e o framework **LangChain4j**. O objetivo é criar um assistente inteligente capaz de executar ferramentas personalizadas (Tools) e ser validado por testes automatizados.
-Este projeto demonstra a implementação de um Agente Inteligente capaz de realizar RAG (Retrieval-Augmented Generation) e executar ações em sistemas legados (Function Calling) usando o ecossistema Java.
-## 🚀 Tecnologias Utilizadas
-* **Java 17**: Linguagem base.
-* **Maven**: Gestão de dependências e build.
-* **LangChain4j**: Framework para integração com LLMs (OpenAI).
-* **JUnit 5 & Mockito**: Testes unitários e mocking de comportamento.
+Este projeto demonstra a construção de um **Agente de IA de nível corporativo** utilizando o ecossistema moderno de **Java 17**. O foco principal é a orquestração de LLMs através do framework **LangChain4j**, permitindo que a inteligência artificial execute ações reais em sistemas Java.
 
-## 🏗️ Estrutura do Projeto
-Funcionalidades:
-1.	Agentic Capabilities: A IA identifica a necessidade de consultar dados externos via métodos Java anotados com @Tool.
-2.	Memória de Contexto: Gerenciamento de janelas de conversação para interações naturais.
-3.	Arquitetura Enterprise: Separação clara entre lógica de IA e regras de negócio.
-O projeto segue o padrão Maven para garantir escalabilidade e organização:
-* `src/main/java`: Contém a interface do Agente, as ferramentas (Tools) e a classe principal de configuração.
-* `src/test/java`: Contém os testes unitários que garantem a integridade da arquitetura.
+---
 
+## 🏗️ Arquitetura do Sistema
+
+A arquitetura foi desenhada seguindo princípios de **baixo acoplamento** e **alta coesão**:
+
+* **Interface Declarativa (`Assistant.java`)**: Define o contrato do serviço de IA, abstraindo a complexidade da comunicação com a API.
+* **Function Calling (`ServiceTools.java`)**: Implementação de ferramentas via anotação `@Tool`, permitindo que a IA consulte dados em tempo real (RAG) e tome decisões baseadas em lógica de negócio.
+* **Orquestração (`Main.java`)**: Configuração centralizada do modelo (OpenAI) e injeção de dependências.
+
+---
+
+## 🚀 Tecnologias e Conceitos Aplicados
+
+* **Java 17**: Utilização de recursos modernos para garantir robustez e performance.
+* **LangChain4j**: Orquestrador líder para integração nativa de LLMs em Java.
+* **Maven**: Automação de build e gestão de dependências.
+* **SDKMAN**: Gerenciamento rigoroso de versões do JDK no ambiente de desenvolvimento.
+* **Qualidade (JUnit 5 & Mockito)**: Validação da lógica do Agente através de testes automatizados, garantindo previsibilidade no comportamento da IA.
+
+---
+
+## 🛠️ Como rodar o projeto
+
+1.  **Pré-requisitos**: Ter o Java 17 configurado (recomenda-se uso do SDKMAN).
+2.  **Configuração da API**: Definir a variável de ambiente:
+    `export OPENAI_API_KEY='sua_chave_aqui'`
+3.  **Compilação e Testes**:
+    ```bash
+    mvn clean install
+    mvn test
+    ```
+
+---
+
+## 💡 Diferenciais Técnicos
+Este projeto não é apenas um "chatbot". Ele implementa:
+1.  **Function Calling**: A IA identifica sozinha quando precisa acionar um método Java para resolver um problema.
+2.  **Arquitetura Extensível**: É simples adicionar novas ferramentas ao Agente sem alterar o núcleo do sistema.
+3.  **Build Reproduzível**: Estrutura preparada para ambientes de Integração Contínua (CI).
