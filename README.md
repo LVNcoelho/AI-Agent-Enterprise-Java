@@ -1,6 +1,6 @@
 
 ________________________________________
-🇺🇸 Portfolio: Enterprise AI Agent with Java & LangChain4j
+ # 🤖 AI Agent Enterprise - Java & LangChain4j
 This project demonstrates the implementation of an Intelligent Agent capable of performing RAG (Retrieval-Augmented Generation) and executing actions in legacy systems (Function Calling) using the Java ecosystem.
 Key Technologies:
 •	Java 17: Core language for robustness and scalability.
