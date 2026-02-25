@@ -13,9 +13,3 @@ O projeto segue o padrão Maven para garantir escalabilidade e organização:
 * `src/main/java`: Contém a interface do Agente, as ferramentas (Tools) e a classe principal de configuração.
 * `src/test/java`: Contém os testes unitários que garantem a integridade da arquitetura.
 
-## 🛠️ Como Executar
-1. Clone o repositório.
-2. Configure sua chave da OpenAI no ambiente: `export OPENAI_API_KEY='sua_chave_aqui'`.
-3. Execute o comando de build e teste:
-   ```bash
-   mvn clean compile test
